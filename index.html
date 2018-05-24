@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Browser</title>
+    <link rel="stylesheet" type="text/css" href="css/photon.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app" class="window">
+        <header class="toolbar toolbar-header">
+            <h1 class="title">{{ 'Current location: ' + location }}</h1>
+        </header>
+        <div class="window-content">
+            <div class="pane-group">
+                <div class="pane-sm sidebar">
+                    <!--<p>-->
+                        <!--<input type="button" value="Reload the app after changing the code"  onClick="window.location.reload()"/>-->
+                    <!--</p>-->
+                    <button class="btn btn-large btn-primary center" @click="up">Back up one directory</button>
+                    <ul class="list-group">
+                        <li class="list-group-header">
+                            <input class="form-control" type="text" v-on:input="filterCurrentFiles" placeholder="Filter current directory">
+                        </li>
+                        <li class="list-group-item" v-for="file in files">
+                            <listing v-bind:key="file.id" v-bind:item="file" class="media-body">
+                            </listing>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pane">
+                    <p><img v-bind:src="image" /></p>
+                    <p>{{ fileContent }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        require('./renderer.js')
+    </script>
+</body>
+</html>

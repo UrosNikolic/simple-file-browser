@@ -1,0 +1,24 @@
+{
+  "name": "simple-file-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrosNikolic/simple-file-browser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UrosNikolic/simple-file-browser/issues"
+  },
+  "homepage": "https://github.com/UrosNikolic/simple-file-browser#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}

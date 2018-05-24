@@ -1,0 +1,23 @@
+.action-container {
+    width: 100%;
+}
+.center {
+    display: table;
+    margin: 20px auto;
+}
+
+.sidebar {
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.listing-item {
+    cursor: pointer;
+}
+
+.listing-item:hover {
+    opacity: .6;
+}
