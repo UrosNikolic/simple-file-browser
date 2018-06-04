@@ -10,16 +10,16 @@ function createWindow() {
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
-    }));
+    }))
     // uncomment this line in order to open DevTools
-    // mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools()
     mainWindow.on('closed', () => {
-        mainWindow = null;
-    });
+        mainWindow = null
+    })
 }
 
 app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
-    app.quit();
-});
+    app.quit()
+})

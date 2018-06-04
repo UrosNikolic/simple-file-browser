@@ -37,14 +37,16 @@ const app = new Vue({
            }
         }
     }
-});
+})
 
 async function go(currentPath) {
     if(currentPath.endsWith('.bpm') || currentPath.endsWith('.png') || currentPath.endsWith('.gif') || currentPath.endsWith('.jpg')) {
-        app.image = 'file://' + currentPath;
+        app.image = 'file://' + currentPath
     } else {
         app.image = null
         app.fileContent = null
+        app.files = []
+        app.tmpFiles = []
 
         try {
             const stat = await lstat(currentPath)
@@ -53,11 +55,9 @@ async function go(currentPath) {
                 app.location = currentPath
 
                 const files = await readdir(app.location)
-                const a = []
                 for(let i = 0; i < files.length; i++) {
-                    a.push({ id: i, name: files[i] })
-                    app.files = a
-                    app.tmpFiles = a
+                    app.files.push({ id: i, name: files[i] })
+                    app.tmpFiles.push({ id: i, name: files[i] })
                 }
             } else {
                 app.fileContent = await readFile(currentPath, 'utf8')
