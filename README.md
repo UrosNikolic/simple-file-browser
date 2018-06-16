@@ -2,6 +2,8 @@
 
 A simple desktop app used for browsing your local hard disk and showing the contents of a file or displaying an image
 
+[Link to article on Cod34Fun explaining how this app was built.](https://cod34fun.com/creating-a-simple-file-browser-using-electron/)
+
 **Requirements**
 node -v 8+
 
