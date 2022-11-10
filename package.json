@@ -19,6 +19,6 @@
   "homepage": "https://github.com/UrosNikolic/simple-file-browser#readme",
   "dependencies": {},
   "devDependencies": {
-    "electron": "^2.0.2"
+    "electron": "^18.3.7"
   }
 }
